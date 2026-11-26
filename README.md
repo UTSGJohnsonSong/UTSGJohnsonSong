@@ -5,7 +5,7 @@
 </picture>
 </p>
 
-Computer Science and Data Science student at the University of Toronto, looking for Summer 2027 internships in software and AI engineering.
+Computer Science and Data Science student at the University of Toronto, looking for internships in software and AI engineering.
 
 ### Selected work
 
