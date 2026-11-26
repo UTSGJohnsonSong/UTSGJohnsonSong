@@ -1,0 +1,37 @@
+name: Generate contribution snake
+
+# Redraws the contribution snake once a day in zekunsong.com's palettes and publishes the two
+# SVGs to the `output` branch, which the profile README reads. Third-party actions are pinned
+# to full commit SHAs (Platane/snk/svg-only v3.5.0, crazy-max/ghaction-github-pages v5.0.0),
+# both running on node24. The schedule avoids the top of the hour, when runs are often delayed.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=#13233B&color_dots=#EAEFF6,#C9D9F5,#8FB1EB,#4F86DE,#1A62D2
+            dist/github-snake-dark.svg?color_snake=#E8EEF8&color_dots=#18243A,#1E3D4C,#2E6676,#4FA6BB,#7FDCF0
+      - uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
