@@ -10,7 +10,7 @@ Computer Science and Data Science student at the University of Toronto, looking 
 ### Selected work
 
 - **[Catalog Gatekeeper](https://github.com/UTSGJohnsonSong/catalog-gatekeeper)**: an agent proposes fixes to a simulated Shopify-style catalog, and deterministic checks plus a person decide what gets written back. [Overview](https://utsgjohnsonsong.github.io/catalog-gatekeeper/)
-- **[Cleave](https://zekunsong.com/#work/cleave)**: our team's real-time voice assistant, a Boson AI hackathon finalist. I built the React client and the audio protocol. [Demo video](https://zekunsong.com/assets/cleave-demo.mp4)
+- **[Cleave](https://zekunsong.com/#work/cleave)**: our team's real-time voice assistant, a Boson AI hackathon finalist. [Demo video](https://zekunsong.com/assets/cleave-demo.mp4)
 - **[CardioTrace](https://github.com/UTSGJohnsonSong/cardiotrace)**: a reproducible study of cardiovascular death risk on U.S. health survey data. [Report](https://utsgjohnsonsong.github.io/cardiotrace/)
 - **Remeda**: backend and data engineering for a clinical AI product, as a University of Toronto applied project.
 - **WholeViz**: I led development for a six-person team extending an industry partner's analytics platform.
